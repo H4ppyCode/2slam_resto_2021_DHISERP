@@ -51,9 +51,9 @@
             for ($i = 0; $i < count($mesTypeCuisinePreferes); $i++) {
                 $unTC = $mesTypeCuisinePreferes[$i];
                 if (count($tabIdTC) == 0) {
-                    $check = "checked"; // on ne provient pas du formulaire de recherche
+                    $check = "checked"; 
                 } else {
-                    $check = ""; // on provient du formulaire de recherche, checked sera peut etre fait dans la condition suivante
+                    $check = ""; 
 
                     if (in_array($unTC->getIdTC(), $tabIdTC)) {
                         $check = "checked";
@@ -83,7 +83,7 @@
             Recherche multi-critères<br />
             <input type="text" name="nomR" placeholder="nom du restaurant" value="<?= $nomR ?>"/>
             <input type="text" name="voieAdrR" placeholder="rue" value="<?= $voieAdrR ?>"/><br />
-            <input type="text" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/>
+            <input type="text" pattern="[0-9]{4,8}" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/>
             <input type="text" name="villeR" placeholder="ville" value="<?= $villeR ?>"/>
 
             <br />

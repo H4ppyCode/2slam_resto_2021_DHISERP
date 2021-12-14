@@ -44,7 +44,7 @@ if (isset($_POST["cpR"])){
     $cpR = $_POST["cpR"];
     
     if (!(preg_match("~^[0-9]{5}$~", $cpR))){
-    ajouterMessage("Le code postal saisie n'est pas valide");
+    ajouterMessage("Merci de respecter le format demandé");
     $villeR="";
     $titre = "Recherche d'un restaurant";
     require_once "$racine/vue/entete.html.php";
